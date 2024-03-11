@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Задача №5</title>
+  </head>
+  <body>
+    <h1>Задача 5. Створити окремі функції, які переводять:</h1>
+    <ol>
+      <li>Сантиметри у дюйми;</li>
+      <li>Кілограми у фунти;</li>
+      <li>Кілометри у милі.</li>
+    </ol>
+    <script>
+      function getInch(centimeters) {
+        return centimeters / 2.54;
+      }
+      function getPounds(kilograms) {
+        return kilograms * 2.205;
+      }
+      function getMile(kilometers) {
+        return kilometers / 1.609;
+      }
+      let centimeters = parseInt(prompt("Введіть сантиметри"));
+      let kilograms = parseInt(prompt("Введіть кілограми"));
+      let kilometers = parseInt(prompt("Введіть кілометри"));
+
+      let inch = getInch(centimeters);
+      let pounds = getPounds(kilograms);
+      let mile = getMile(kilometers);
+      document.write(`
+				<table>
+					<tr>
+						<td>${centimeters} сантиметрів:</td>
+						<td>${inch.toFixed(1)} дюймів</td>
+					</tr>
+					<tr>
+						<td>${kilograms} кілограм:</td>
+						<td>${pounds.toFixed(1)} фунтів</td>
+					</tr>
+					<tr>
+						<td>${kilometers} кілометрів:</td>
+						<td>${mile.toFixed(1)} миль</td>
+					</tr>
+				</table>
+			`);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Задача №8</title>
+  </head>
+  <body>
+    <h1>
+      Задача 8. Створити функцію, яка виводить банер (у функцію передаються:
+      зображення, заголовок та посилання, куди переходимо при кліку на
+      зображення (тег img повине знаходитись у середині тега a:
+      <!-- <a> <img src="”шлях”" /> </a> -->
+    </h1>
+
+    <script>
+      function showBanner() {
+        document.write(`
+				<div>
+					<h1>Перехід на безліч смайликів !</h1>
+					<a target="_blank" href="https://www.istockphoto.com/uk/%D1%84%D0%BE%D1%82%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D1%96%D1%97/%D1%81%D0%BC%D0%B0%D0%B9%D0%BB%D0%B8%D0%BA">
+						<img src="img/img1.jpg" alt="">
+					</a>
+				</div>
+				`);
+      }
+      showBanner();
+    </script>
+  </body>
+</html>

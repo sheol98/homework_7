@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css">
+    <title>Задача №4</title>
+  </head>
+  <body>
+    <h1>
+      Задача 4. Створити функцію, яка для 3 заданих чисел знаходить одночасно
+      декілька результатів: кількість парних, кількість додатних, кількість
+      більших за 100.
+    </h1>
+    <script>
+      function getEvenPositiveGreaterThanaHundred() {
+				let num1 = parseInt(prompt('Введіть перше число'))
+				let num2 = parseInt(prompt('Введіть друге число'))
+				let num3 = parseInt(prompt('Введіть третє число'))
+				let quantityEven = 0
+				if(num1%2===0) quantityEven++
+				if(num2%2===0) quantityEven++
+				if(num3%2===0) quantityEven++
+				let quantityPositive = 0
+				if(num1>0) quantityPositive++
+				if(num2>0) quantityPositive++
+				if(num3>0) quantityPositive++
+				let quantityGreaterThanaHundred = 0
+				if(num1>100) quantityGreaterThanaHundred++
+				if(num2>100) quantityGreaterThanaHundred++
+				if(num3>100) quantityGreaterThanaHundred++
+				document.write(
+					`
+					<table>
+						<tr>
+							<td>Кількість парних:</td>
+							<td>${quantityEven}</td>
+						</tr>
+						<tr>
+							<td>Кількість додатних:</td>
+							<td>${quantityPositive}</td>
+						</tr>
+						<tr>
+							<td>Кількість
+						більших за 100:</td>
+							<td>${quantityGreaterThanaHundred}</td>
+						</tr>
+					</table>
+					`
+				)
+			}
+			getEvenPositiveGreaterThanaHundred()
+    </script>
+		
+  </body>
+</html>

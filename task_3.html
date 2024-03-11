@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Задача №3</title>
+  </head>
+  <body>
+    <h1>Задача 3. Створити окремі функції, які для 4 чисел знаходять:</h1>
+    <ol>
+      <li>суму;</li>
+      <li>добуток;</li>
+      <li>середнє арифметичне;</li>
+      <li>мінімальне значення.</li>
+    </ol>
+    <script>
+      function getSum(a, b, c, d) {
+        return a + b + c + d;
+      }
+      function getMultiplication(a, b, c, d) {
+        return a * b * c * d;
+      }
+      function getArithmeticMean(a, b, c, d) {
+        return (a + b + c + d) / 4;
+      }
+      function getMin(a, b, c, d) {
+        return Math.min(a, b, c, d);
+      }
+			const a = parseInt(prompt('Значення a'))
+			const b = parseInt(prompt('Значення b'))
+			const c = parseInt(prompt('Значення c'))
+			const d = parseInt(prompt('Значення d'))
+
+			let sum = getSum(a, b, c, d)
+			let multiplication = getMultiplication(a, b, c, d)
+			let arithmeticMean = getArithmeticMean(a, b, c, d)
+			let min = getMin(a, b, c, d)
+			document.write(`
+			<ul>
+				<li>Сума - ${sum} </li>
+				<li>Добуток - ${multiplication}</li>
+				<li>Середнє арифметичне - ${arithmeticMean}</li>
+				<li>Мінімальне значення - ${min}</li>
+			</ul>
+		`)
+    </script>
+		
+  </body>
+</html>
